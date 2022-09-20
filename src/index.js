@@ -12,7 +12,7 @@ function Square(props) {
 
 class Board extends React.Component {
 	constructor(props) {
-		super(props)
+		super(props);
 		this.state = {
 			squares: Array(9).fill(null),
 			xIsNext: true,
@@ -46,7 +46,7 @@ class Board extends React.Component {
 		if (winner) {
 			status = 'Winner: ' + winner;
 		} else {
-			status = 'Next Player: ' + (this.status.xIsNext ? 'X' : 'O');
+			status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
 		}
 
 		return (
@@ -106,11 +106,9 @@ function calculateWinner(squares) {
 	];
 	for (let i = 0; i < lines.length; i++) {
 		const [a, b, c] = lines[i];
-		if (squares[a] 
-			&& squares[a] === squares[b] 
-			&& squares[a] === squares[c]) {
-				return squares[a];
-			}
+		if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+			return squares[a];
+		}
 	}
 	return null;
 }
