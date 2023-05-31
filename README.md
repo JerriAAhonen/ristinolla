@@ -1,3 +1,9 @@
+# Ristinolla / Tic Tac Toe
+
+This is an exercise I made to get to know React.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
